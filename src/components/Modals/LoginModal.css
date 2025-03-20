@@ -1,3 +1,7 @@
+input {
+    all: unset; /* Resetea todos los estilos predeterminados del navegador */
+}
+
 /* Fondo del modal */
 .modal-overlay {
     position: fixed;
@@ -14,6 +18,7 @@
 
 /* Contenedor de dos columnas */
 .modal-container-two-columns {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     max-width: 900px;
@@ -22,6 +27,7 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    z-index: 100;
 }
 
 /* Columna izquierda: Formulario */
@@ -47,25 +53,68 @@
     margin-bottom: 20px;
 }
 
-.login-form .input-icon {
+/* Estilo de los inputs con el ícono */
+.input-icon {
     display: flex;
     align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 15px;
-    background-color: #ffffff;
+    border: 2px solid #ddd; /* Borde inicial neutro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    background-color: transparent; /* Fondo neutral */
+    margin-bottom: 15px; /* Separación entre inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Animación suave */
 }
 
-.login-form .input-icon input {
-    border: none;
-    outline: none;
-    width: 100%;
-    padding-left: 10px;
+/* El input interno */
+.input-icon input {
+    background-color: transparent !important; /* Asegura que el fondo sea transparente */
+    border: none !important; /* Elimina cualquier borde */
+    outline: none !important; /* Elimina cualquier contorno predeterminado */
+    color: #333; /* Texto oscuro */
     font-size: 1rem;
-    background-color: transparent;
+    width: 100%;
+    padding-left: 10px; /* Espaciado entre ícono y texto */
+    -webkit-appearance: none; /* Elimina estilos predeterminados en Safari */
+    -moz-appearance: none; /* Elimina estilos predeterminados en Firefox */
+    appearance: none; /* Elimina estilos predeterminados en navegadores modernos */
+    -webkit-focus-ring-color: transparent !important; /* Anula el contorno de foco en WebKit */
 }
 
+/* En caso de pseudo-elementos no deseados */
+.input-icon input::before,
+.input-icon input::after {
+    content: none !important;
+}
+
+
+/* Placeholder estilizado */
+.input-icon input::placeholder {
+    color: #aaa; /* Placeholder gris claro */
+    opacity: 0.8; /* Transparencia sutil */
+}
+
+/* Hover sobre el contenedor del input */
+/* Hover sobre el contenedor del input */
+.input-icon input::placeholder {
+    color: #aaa; /* Placeholder gris claro */
+    opacity: 0.8; /* Transparencia sutil */
+}
+
+.input-icon:hover,
+.input-icon input:focus {
+    border-color: #2563eb; /* Borde azul en hover/focus */
+    outline: none !important; /* Asegura que no haya contorno */
+}
+
+/* Cambiar el color del ícono en hover y foco */
+.input-icon:hover svg,
+.input-icon input:focus + svg {
+    color: #2563eb !important; /* Azul brillante */
+    transition: color 0.3s ease; /* Suavidad en el cambio de color */
+}
+
+
+/* Botones y opciones adicionales */
 .login-options {
     display: flex;
     justify-content: space-between;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaLock, FaGoogle } from 'react-icons/fa';
+import { FaEnvelope, FaLock, FaGoogle, FaTimesCircle } from 'react-icons/fa';
 import './LoginModal.css'; // Archivo CSS para estilos
 
 const LoginModal = ({ isOpen, onClose }) => {
@@ -23,19 +23,15 @@ const LoginModal = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
     return (
-        <div className="modal-overlay">
-            <div className="modal-container-two-columns">
-                {/* Botón de cierre */}
-                <button className="modal-close-button" onClick={onClose}>
-                    &times;
-                </button>
+        <div className="modal-overlay" onClick={onClose} >
+            <div className="modal-container-two-columns" onClick={(e) => e.stopPropagation()}>
                 {/* Columna izquierda: Formulario */}
                 <div className="login-form-container">
                     <h1 className="login-title">¡Bienvenido de nuevo!</h1>
                     <p className="login-subtitle">Ingresa tus datos para continuar.</p>
                     <form onSubmit={handleSubmit} className="login-form">
                         <div className="input-icon">
-                            <FaEnvelope color="#888" size={18} />
+                            <FaEnvelope className="icon-envelope" color="#888" size={18} />
                             <input
                                 type="email"
                                 name="email"
