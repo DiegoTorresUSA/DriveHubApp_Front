@@ -1,0 +1,121 @@
+.header {
+    position: fixed; /* Fijo en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0; /* Color de fondo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    height: 40px; /* Ajusta el tamaño del logo */
+    margin-right: 10px;
+}
+
+.slogan {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-button {
+    background-color: #007bff; /* Color de los botones */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-button:hover {
+    background-color: #0056b3; /* Oscurece el color al pasar el ratón */
+}
+
+/* Estilos responsivos */
+@media (max-width: 767px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    .slogan {
+        font-size: 1em;
+    }
+
+    .nav-button {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+    
+}
+
+/* 🔵 ESTILOS PARA MÓVILES */
+@media (max-width: 1023px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #004aad;
+        z-index: 50;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 🔵 ESTILOS PARA ESCRITORIO */
+@media (min-width: 1024px) {
+    .nav {
+        display: flex !important;
+        position: relative;
+    }
+
+    .desktop-menu {
+        display: flex !important;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+}
