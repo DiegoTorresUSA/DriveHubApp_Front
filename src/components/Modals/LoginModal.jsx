@@ -3,7 +3,7 @@ import { FaEnvelope, FaLock, FaGoogle, FaTimesCircle } from 'react-icons/fa';
 import './LoginModal.css'; // Archivo CSS para estilos
 
 const LoginModal = ({ isOpen, onClose }) => {
-    const [credentials, setCredentials] = useState({ email: '', password: '' });
+    const [credentials, setCredentials] = useState({ "email": '', "password": '' });
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -53,9 +53,6 @@ const LoginModal = ({ isOpen, onClose }) => {
                             />
                         </div>
                         <div className="login-options">
-                            <label>
-                                <input type="checkbox" /> Recordar por 30 días
-                            </label>
                             <a href="#" className="forgot-password">
                                 ¿Olvidaste tu contraseña?
                             </a>
@@ -76,7 +73,7 @@ const LoginModal = ({ isOpen, onClose }) => {
 
                 {/* Columna derecha: Imagen alusiva a vehículos */}
                 <div className="login-image-container">
-                    <img src="/images/car-login.jpg" alt="Vehículo de fondo" className="login-image" />
+                    <img src="/src/assets/image-login2.jpg" alt="Vehículo de fondo" className="login-image" />
                 </div>
             </div>
         </div>

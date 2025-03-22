@@ -1,0 +1,45 @@
+.admin-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4; /* Color de fondo */
+}
+
+.admin-panel-form {
+    background: white;
+    padding: 40px; /* Aumenta el espacio interno */
+    border-radius: 15px; /* Bordes más pronunciados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+    width: 100%;
+    max-width: 600px; /* Ahora es más ancho */
+    font-size: 1.2rem; /* Aumenta el tamaño del texto */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Más espacio entre los campos */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px; /* Inputs más grandes */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem; /* Texto más grande dentro del input */
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 15px; /* Botón más grande */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem; /* Texto más grande del botón */
+}
+
+button:hover {
+    background-color: #0056b3;
+}

@@ -5,7 +5,7 @@ import './Main.css';
 const Main = () => {
   return (
     <main className="main">
-      <div className="search-container text-center mt-6">
+      <div className="search-container text-left mt-6">
       <h2 className="text-2xl md:text-3xl">
     Encuentra tu vehículo ideal
   </h2>
