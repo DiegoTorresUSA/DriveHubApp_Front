@@ -12,7 +12,7 @@ function Header() {
   const closeModal = () => setIsModalOpen(false); // Cierra el modal
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg z-50">
+    <header className="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg z-50 font-sans">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center flex-shrink-0">

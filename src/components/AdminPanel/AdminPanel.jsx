@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
-import {FaEnvelope, FaGoogle, FaLock} from 'react-icons/fa';
+import {FaEnvelope, FaLock} from 'react-icons/fa';
+import {useNavigate} from 'react-router-dom';
 import './AdminPanel.css';
 
 const AdminPanel = () => {
     const [credentials, setCredentials] = useState({ "email": '', "password": '' });
+    const navigate = useNavigate();
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -14,6 +16,7 @@ const AdminPanel = () => {
         e.preventDefault();
         if (credentials.email === 'admin@drivehub.com' && credentials.password === 'password') {
             alert('Inicio de sesión exitoso');
+            navigate('/AddProduct');
         } else {
             alert('Credenciales incorrectas');
         }
@@ -21,7 +24,7 @@ const AdminPanel = () => {
     return (
         <div className="admin-panel">
             <form onSubmit={handleSubmit} className="admin-panel-form">
-                <h1 className="login-title">Admin Login</h1>
+                <h1 className="login-title">Admin Panel</h1>
                     <div className="input-icon">
                         <FaEnvelope className="icon-envelope" color="#888" size={18} />
                         <input
