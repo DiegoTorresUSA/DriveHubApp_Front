@@ -4,7 +4,7 @@ import React from 'react';
 function VehicleInfo({ formData, onChange }) {
     return (
         <div className="border p-4 rounded-md mb-4">
-            <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-900 mb-10">Información del Vehículo</h2>
+            <h2 className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-900 mb-10">Información del Vehículo</h2>
             <div className="mb-8">
                 <label className="block text-lg font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-900 mb-2">Tipo de Vehículo</label>
                 <select className="mt-2 block w-full p-3 border border-gray-300 rounded-md" name="vehicleType" value={formData.vehicleType} onChange={onChange}>

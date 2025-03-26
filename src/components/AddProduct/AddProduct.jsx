@@ -89,13 +89,6 @@ const AddProduct = () => {
                     </div>
 
                         <Carform />
-                    {/* Submit Button */}
-                    <button
-                        type="submit"
-                        className=" mt-12 w-1/2 bg-gradient-to-r from-blue-600 to-blue-900 text-white py-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-900 transition"
-                    >
-                        Guardar Registro
-                    </button>
                 </form>
             </main>
         </div>
